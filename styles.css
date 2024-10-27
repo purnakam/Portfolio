@@ -1,0 +1,373 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme header,
+.dark-theme footer,
+.dark-theme .content-section,
+.dark-theme .popup-content {
+    background-color: #36454F; /* Darker background for dark theme */
+}
+
+/* Light theme styles */
+.light-theme {
+    background-color: #FFF5EE;
+    color: #000000;
+}
+
+.light-theme header,
+.light-theme footer,
+.light-theme .content-section,
+.light-theme .popup-content {
+    background-color: #E9DCC9; /* Light theme background */
+}
+
+/* Smooth scrolling for internal links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2em;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #F88379;
+}
+
+header p {
+    color: #E3735E;
+}
+
+/* Theme Toggle */
+.theme-toggle button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #4a90e2;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.theme-toggle button:hover {
+    transform: rotate(180deg);
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 2em;
+    line-height: 1.3;
+    margin: 2em auto;
+    max-width: 800px;
+    max-height: 550px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.content-section.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 97.5%;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    padding: 0.5em 1em; /* Reduced padding for smaller size */
+    background-color: #4a90e2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1em; /* Reduced font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* To position the shine */
+    overflow: hidden; /* To contain the shine effect */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 100%);
+    transform: translateY(100%) rotate(30deg); /* Adjust shine position */
+    transition: transform 0.5s ease;
+}
+
+.download-btn:hover:before {
+    transform: translateY(-100%) rotate(30deg); /* Move shine on hover */
+}
+
+.download-btn:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+/* Vertical Navigation */
+#vertical-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    position: fixed;
+    top: 30%;
+    left: 2%;
+    z-index: 100; /* Ensures the nav is on top */
+    padding: 1em;
+    background-color: #36454F; /* Default background color */
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s; /* Transition for smooth theme change */
+}
+
+/* Links inside the navigation */
+#vertical-nav a {
+    color: #4a90e2; /* Default link color */
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+/* Hover effect for links */
+#vertical-nav a:hover {
+    color: #fff;
+    background-color: #4a90e2;
+    transform: scale(1.1);
+}
+
+/* Active link styling */
+#vertical-nav a.active {
+    color: #fff;
+    background-color: #4a90e2;
+    font-weight: bold;
+}
+
+/* Dark theme styles for vertical navigation */
+.dark-theme #vertical-nav {
+    background-color: #36454F; /* Darker background for dark theme */
+}
+
+/* Light theme styles for vertical navigation */
+.light-theme #vertical-nav {
+    background-color: #E9DCC9; /* Lighter background for light theme */
+}
+
+/* Dark theme styles for links */
+.dark-theme #vertical-nav a {
+    color: #4a90e2; /* Link color for dark theme */
+}
+
+.dark-theme #vertical-nav a:hover {
+    background-color: #4a90e2; /* Background color on hover for dark theme */
+    color: #fff; /* Text color on hover for dark theme */
+}
+
+/* Light theme styles for links */
+.light-theme #vertical-nav a {
+    color: #4a90e2; /* Link color for light theme */
+}
+
+.light-theme #vertical-nav a:hover {
+    background-color: #4a90e2; /* Background color on hover for light theme */
+    color: #fff; /* Text color on hover for light theme */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #vertical-nav {
+        display: none; /* Hide navigation links by default on mobile */
+        flex-direction: column;
+        background-color: white; /* Background color for dropdown */
+        position: absolute; /* Make it overlay */
+        top: 60px; /* Position below the header */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    #vertical-nav.show {
+        display: flex; /* Show navigation links when toggled */
+    }
+
+    body {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    header {
+        padding: 1em;
+    }
+
+    header h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    .content-section {
+        padding: 1em; /* Smaller padding */
+        margin: 1em auto; /* Reduced margin */
+    }
+
+    .download-btn {
+        padding: 0.4em 0.8em; /* Smaller button padding */
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    #vertical-nav {
+        top: 10%;
+        left: 5%;
+        padding: 0.5em;
+        gap: 1em;
+        width: 90%; /* Full width for mobile */
+    }
+
+    #vertical-nav a {
+        font-size: 1em; /* Smaller font size for mobile */
+        padding: 0.4em 0.8em; /* Smaller padding */
+    }
+}
+
+/* Card Effects */
+.card {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    align-content: center;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #fff; /* White background */
+    margin: auto; /* Centered horizontally */
+    padding: 20px; /* Padding */
+    border: 1px solid #888; /* Border */
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Close Button for Popup */
+.popup-close {
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff0000; /* Close button color */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Dark theme styles for popup */
+.dark-theme .popup-content {
+    background-color: #36454F; /* Dark theme background */
+    color: #ffffff; /* Dark theme text color */
+}
+
+/* Light theme styles for popup */
+.light-theme .popup-content {
+    background-color: #FFF5EE; /* Light theme background */
+    color: #333; /* Light theme text color */
+}
+
+.contact-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.contact-info {
+    width: 45%;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1em; /* Padding inside the card */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.contact-info:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Adjust contact card for mobile */
+@media (max-width: 768px) {
+    .contact-info {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 1em; /* Space between cards */
+    }
+}

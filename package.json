@@ -1,0 +1,26 @@
+{
+    "name": "particles-js-project",
+    "version": "1.0.0",
+    "description": "A project using Particles.js for creating particle animations.",
+    "main": "src/js/app.js",
+    "scripts": {
+      "start": "live-server src",
+      "build": "echo 'Build command here'",
+      "test": "echo 'Test command here'"
+    },
+    "keywords": [
+      "particles",
+      "animation",
+      "canvas",
+      "web"
+    ],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+      "particles.js": "^2.0.0"  // or any version you're using
+    },
+    "devDependencies": {
+      "live-server": "^1.2.1"
+    }
+  }
+  

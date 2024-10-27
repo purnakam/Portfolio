@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purnakam Shrivastava - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>Purnakam Shrivastava</h1>
+        <p>Data Science Student | Top 12.69% on LeetCode | JPMorgan Software Engineering Experience</p>
+        <div class="theme-toggle">
+            <button onclick="toggleTheme()">🌞/🌛</button>
+        </div>
+    </header>
+
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger" onclick="toggleNav()">
+        &#x2630; <!-- Three-dot icon (hamburger menu) -->
+    </div>
+    
+    <nav id="vertical-nav">
+        <a href="#about" onclick="openSection('about')">About</a>
+        <a href="#personal-info" onclick="openSection('personal-info')">Personal Info.</a>
+        <a href="#education" onclick="openSection('education')">Qualification</a>
+        <a href="#skills" onclick="openSection('skills')">Skills</a>
+        <a href="#projects" onclick="openSection('projects')">Projects</a>
+        <a href="#experience" onclick="openSection('experience')">Experience</a>
+        <a href="#certificates" onclick="openSection('certificates')">Certificates</a>
+        <a href="#contact" onclick="openSection('contact')">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p class="card">
+                <i class="fas fa-lightbulb icon"></i>
+                As an aspiring data scientist, I am passionate about leveraging data to drive insights and inform decision-making. 
+                My journey in data science is fueled by a commitment to continuous learning and experimentation.
+            </p>
+            <p class="card">
+                <i class="fas fa-robot icon"></i>
+                I am currently working on various projects that involve not only predictive modeling and machine learning algorithms but also the development of complete systems with frontend, backend, and database management components. These projects are in progress and will be deployed soon.
+            </p>
+            <p class="card">
+                <i class="fas fa-cogs icon"></i>
+                My goal is to solve real-world problems using data science and contribute to advancements in technology, while constantly exploring new tools and techniques in the field.
+            </p><br>
+            <p class="card">
+                <i class="fas fa-medal" style="color: gold;"></i> 
+                <strong>5-Star Gold Badge</strong> - Python (HackerRank)
+            </p>
+            <p class="card">
+                <i class="fas fa-code"></i> 150+ Problems Solved
+                <br>
+                <i class="fas fa-trophy"></i> Top 12.69% Contest Rating
+            </p> <br>
+            <a href="https://drive.google.com/file/d/1mW1l738R8YNV3M3YmCbwXQsff-raeoWr/view?usp=sharing" id="download-btn" class="download-btn" target="_blank" download>Download CV</a> 
+        </section>
+
+        <section id="personal-info" class="content-section">
+            <h2>Personal Information</h2><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupDOB')">
+                <h3><i class="fas fa-calendar-day"></i> Date of Birth</h3>
+                <p>10 June 2003</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupNationality')">
+                <h3><i class="fas fa-flag"></i> Nationality</h3>
+                <p>Indian</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupCity')">
+                <h3><i class="fas fa-city"></i> Current City</h3>
+                <p>Bhilai, Chhattisgarh</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupEducation')">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <p>Pursuing B.Tech in Data Science (3rd Year)</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupCertifications')">
+                <h3><i class="fas fa-certificate"></i> Relevant Certifications</h3>
+                <p>Completed 5 certifications in fields related to Data Science</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupCoreSkills')">
+                <h3><i class="fas fa-cogs"></i> Core Skills</h3>
+                <p>Python programming, data analysis, machine learning fundamentals, problem-solving</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupExperience')">
+                <h3><i class="fas fa-briefcase"></i> Practical Experience</h3>
+                <p>Data preprocessing, exploratory data analysis, foundational ML algorithms</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupFocusAreas')">
+                <h3><i class="fas fa-bullseye"></i> Focus Areas</h3>
+                <p>Advanced ML models, statistical analysis, data handling techniques</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupStrengths')">
+                <h3><i class="fas fa-user-shield"></i> Strengths</h3>
+                <p>Adaptable, analytical, enthusiastic about new tools</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupWorkEthic')">
+                <h3><i class="fas fa-award"></i> Work Ethic</h3>
+                <p>Detail-oriented, goal-driven, committed to continuous learning</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupPassport')">
+                <h3><i class="fas fa-passport"></i> Passport Status</h3>
+                <p>Applied</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupDL')">
+                <h3><i class="fas fa-id-card"></i> Driver’s License</h3>
+                <p>Yes</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupRelocation')">
+                <h3><i class="fas fa-plane"></i> Available for Relocation</h3>
+                <p>Yes</p>
+            </div>
+        </section>
+           
+
+        <section id="education" class="content-section">
+            <h2>🎓 Qualification</h2>
+            <br>
+            
+            <!-- Currently Pursuing Section -->
+            <div class="institution">
+                <h3><i class="fas fa-university"></i> Currently Pursuing</h3>
+                <div class="card">
+                    <h4>Rungta College of Engineering and Technology, Bhilai, CG</h4>
+                    <p><strong>Bachelor of Technology</strong> in Data Science</p>
+                    <p><i class="fas fa-calendar-alt"></i> 2022 - 2026</p>
+                    <p><i class="fas fa-chart-line"></i> CGPA: 7.3</p></div>
+            </div>
+            <br>
+            
+            <div class="coursework">
+                <div class="card">
+                    <h3><i class="fas fa-book-open"></i> Relevant Coursework</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Data Structures</li>
+                    <li><i class="fas fa-check-circle"></i> Operating Systems</li>
+                    <li><i class="fas fa-check-circle"></i> Analysis of Algorithms</li>
+                    <li><i class="fas fa-check-circle"></i> DBMS</li>
+                    <li><i class="fas fa-check-circle"></i> Artificial Intelligence</li>
+                    <li><i class="fas fa-check-circle"></i> Object-Oriented Programming</li>
+                    <li><i class="fas fa-check-circle"></i> Machine Learning</li>
+                    <li><i class="fas fa-check-circle"></i> Software Engineering</li>
+                </ul>
+                </div>
+            </div>
+            <br>
+            
+            <!-- Completed Qualifications Section -->
+            <div class="completed">
+                <h3><i class="fas fa-graduation-cap"></i> Completed Qualifications</h3>
+                
+                <div class="school">
+                    <div class="card">
+                    <h4><i class="fas fa-school"></i> Abhinav Vidya Mandir H.S.S, Pussore, Dist. Raigarh, C.G.</h4>
+                    <p><strong>Class 10th</strong></p>
+                    <p><i class="fas fa-calendar-alt"></i> 2019</p>
+                    <p><i class="fas fa-chart-line"></i> Percentage: 84.3%</p>
+                </div>
+                </div>
+                <br>
+                
+                <div class="school">
+                    <div class="card">
+                        <h4><i class="fas fa-school"></i> Abhinav Vidya Mandir H.S.S, Pussore, Dist. Raigarh, C.G.</h4>
+                    <p><strong>Class 12th (PCM)</strong></p>
+                    <p><i class="fas fa-calendar-alt"></i> 2021</p>
+                    <p><i class="fas fa-chart-line"></i> Percentage: 94%</p>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="school">
+                    <div class="card">
+                        <h4><i class="fas fa-award"></i> Annex Computer Education</h4>
+                    <p><strong>3rd All India Tally Commerce Aptitude Test</strong></p>
+                    <p><i class="fas fa-calendar-alt"></i> September 26, 2019</p>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+        
+        
+        <section id="skills" class="content-section">
+            <h2>🛠 Skills</h2><br>
+            
+            <div class="skills-category">
+                <div class="card"><h3>
+                    <i class="fas fa-code"></i> Programming Languages</h3>
+                    <p>Python, Java, JavaScript, HTML/CSS</p></div>
+            </div><br>
+            
+            <div class="skills-category">
+                <div class="card">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & Libraries</h3>
+                <p>React, TensorFlow, OpenCV, pandas, NumPy, Matplotlib, Scikit-learn</p>
+                </div>
+            </div><br>
+            
+            <div class="skills-category">
+                <h3><i class="fas fa-tools"></i> Developer Tools</h3>
+                <p>Git, Google Cloud Platform, Visual Studio Code, Visual Studio, PyCharm, IntelliJ IDEA, Eclipse</p>
+            </div><br>
+            
+            <div class="skills-category">
+                <div class="card">
+                    <h3><i class="fas fa-chart-line"></i> Other Skills</h3>
+                    <p>Tally, MS Excel, MS Word, MS PowerPoint, Financial Data Analysis, TypeScript, Web Applications, Technical Communication, Financial Analysis</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <p><i class="fas fa-info-circle"></i> Click on each project title to see more details. Press <strong>Esc</strong> to close the popup.</p><br>
+        
+            <div class="card" onclick="showPopup(event, 'popupLegalAid')">
+                <h3><i class="fas fa-gavel"></i> LegalAid</h3>
+                <p>Web app providing legal aid with HTML, CSS, JavaScript, PostgreSQL, and Docker.</p>
+            </div><br>
+        
+            <div class="card" onclick="showPopup(event, 'popupVirtualMouse')">
+                <h3><i class="fas fa-mouse-pointer"></i> Virtual Mouse</h3>
+                <p>Gesture-based OpenCV virtual mouse hosted on Render.</p>
+            </div>
+        </section>
+        
+        
+        <section id="experience" class="content-section">
+            <h2>Experience</h2>
+            <p><i class="fas fa-info-circle"></i> Click on each project title to see more details. Press <strong>Esc</strong> to close the popup.</p><br>
+        
+            <div class="card" onclick="showPopup(event, 'popupJPMorgan')">
+                <h3><i class="fas fa-building"></i> JPMorgan Chase</h3>
+                <p><i class="fas fa-calendar-alt"></i> Software Engineering Job Simulation in August 2024.</p>
+            </div>
+        </section>
+        
+        <section id="certificates" class="content-section">
+            <h2>Certificates & Achievements</h2>
+            <p><i class="fas fa-info-circle"></i> Click on each project title to see more details. Press <strong>Esc</strong> to close the popup.</p><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupLeetCode')">
+                <h3><i class="fas fa-code"></i> LeetCode</h3>
+                <p><i class="fas fa-trophy"></i> 150+ Problems Solved, Top 12.69% Contest Rating.</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupContentstack')">
+                <h3><i class="fas fa-cloud"></i> Contentstack</h3>
+                <p><i class="fas fa-graduation-cap"></i> Contentstack for Developers + Launch (TechSurf 2024).</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupNSE')">
+                <h3><i class="fas fa-chart-line"></i> NSE India</h3>
+                <p><i class="fas fa-dollar-sign"></i> Options Trading Strategies in Python.</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupQuantInsti')">
+                <h3><i class="fas fa-book-open"></i> QuantInsti</h3>
+                <p><i class="fas fa-lightbulb"></i> Introduction to Machine Learning for Trading.</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupAWS')">
+                <h3><i class="fas fa-aws"></i> AWS Training</h3>
+                <p><i class="fas fa-database"></i> Data Analytics Learning Plan [EMR, Glue, Athena, Redshift, Serverless Analytics].</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupCodingSpoon')">
+                <h3><i class="fas fa-book"></i> Coding Spoon</h3>
+                <p><i class="fas fa-code-branch"></i> Advanced Problem Solving and DSA with Java.</p>
+            </div><br>
+            
+            <div class="card" onclick="showPopup(event, 'popupBharatScouts')">
+                <h3><i class="fas fa-award"></i> Bharat Scouts and Guides</h3>
+                <p><i class="fas fa-medal"></i> Governor Award, 2018.</p>
+            </div>
+        </section>
+        
+        
+        <!-- Popup Modals -->
+        <div class="popup" id="popupLegalAid">
+            <span class="popup-close" onclick="hidePopup('popupLegalAid')">Close</span>
+            <div class="popup-content">
+                <h3>LegalAid Project Details</h3>
+                <p><strong>Overview:</strong><br>
+                This project is a web application designed to provide legal aid and resources. It utilizes HTML, CSS, JavaScript, PostgreSQL, and Docker to create an efficient platform for users seeking legal assistance.</p>
+                
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Developed a full-stack web application using HTML, CSS, and JavaScript for building an interactive and responsive frontend.</li>
+                    <li>Implemented PostgreSQL for efficient and secure database management, storing user information and legal resources.</li>
+                    <li>Integrated a chatbot to provide real-time legal help, offering quick and accurate responses to legal queries.</li>
+                    <li>Enabled lawyer consultations, allowing users to schedule appointments and get professional legal advice.</li>
+                    <li>Provided detailed and searchable information on the Indian Constitution, helping users easily navigate through complex legal topics.</li>
+                    <li>Designed an intuitive, user-friendly interface to ensure smooth navigation and improved user experience across devices.</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div class="popup" id="popupVirtualMouse">
+            <span class="popup-close" onclick="hidePopup('popupVirtualMouse')">Close</span>
+            <div class="popup-content">
+                <h3>Virtual Mouse Project Details</h3>
+                <p><strong>Overview:</strong><br>
+                This project implements a gesture-based virtual mouse using OpenCV. It allows users to control their cursor through hand movements and is hosted on Render.</p>
+                
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Utilized OpenCV for real-time hand tracking and gesture recognition to translate movements into cursor control.</li>
+                    <li>Developed a user-friendly interface that responds to hand gestures, enabling intuitive navigation and control.</li>
+                    <li>Employed machine learning techniques to improve gesture recognition accuracy and responsiveness.</li>
+                    <li>Hosted the application on Render for easy accessibility and deployment.</li>
+                    <li>Integrated features for cursor speed adjustment and customizable gesture settings to enhance user experience.</li>
+                    <li>Designed to support various environments and lighting conditions, ensuring robust performance.</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div class="popup" id="popupJPMorgan">
+            <span class="popup-close" onclick="hidePopup('popupJPMorgan')">Close</span>
+            <div class="popup-content">
+                <h3>JPMorgan Chase Experience Details</h3><br>
+                <p>This experience involves participating in a software engineering job simulation with JPMorgan Chase in August 2024, focusing on real-world software engineering challenges.</p><br>
+                <p><strong>Key Highlights:</strong></p><br>
+                <ul>
+                    <li>Engaged in hands-on software engineering tasks, mirroring actual job responsibilities.</li>
+                    <li>Collaborated with peers to solve complex engineering problems.</li>
+                    <li>Gained insight into the corporate culture and operations of a leading financial institution.</li>
+                    <li>Interfaced with a stock price data feed, setting up a development environment for data analysis by fixing broken Python scripts and adding optional unit tests.</li>
+                    <li>Used JPMorgan Chase’s open-source tool, Perspective, to implement data visualization for stock trading dashboards, working with JavaScript and TypeScript.</li>
+                    <li>Displayed real-time stock price data in visually appealing charts, aiding traders in analyzing under/over-valued stocks and improving decision-making.</li>
+                    <li>Gained hands-on experience in Python, React, TypeScript, npm, Git, and financial data analysis through practical coding tasks.</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        
+        <div class="popup" id="popupLeetCode">
+            <span class="popup-close" onclick="hidePopup('popupLeetCode')">Close</span>
+            <div class="popup-content">
+                <h3>LeetCode Certificate Details</h3>
+                <p>Achieved 150+ problems solved with a contest rating placing me in the top 12.69% of participants, showcasing strong problem-solving and algorithmic skills.</p>
+                <p><strong>Achievements:</strong></p>
+                <ul>
+                    <li>Demonstrated proficiency in data structures and algorithms through competitive coding, primarily using Python.</li>
+                    <li>Participated in weekly coding contests to enhance and test skills under pressure.</li>
+                    <li>Utilized Java in various contests, further diversifying coding abilities.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="popup" id="popupContentstack">
+            <span class="popup-close" onclick="hidePopup('popupContentstack')">Close</span>
+            <div class="popup-content">
+                <h3>Contentstack Certificate Details</h3>
+                <p>Completed the Contentstack for Developers course and participated in the Launch event at TechSurf 2024, enhancing my knowledge of content management systems.</p>
+                <p><strong>Key Takeaways:</strong></p>
+                <ul>
+                    <li>Learned to build and manage content-driven applications effectively.</li>
+                    <li>Explored best practices in using headless CMS for modern web development.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <<div class="popup" id="popupNSE">
+            <span class="popup-close" onclick="hidePopup('popupNSE')">Close</span>
+            <div class="popup-content">
+                <h3>NSE India Certificate Details</h3>
+                <p>Completed training on Options Trading Strategies in Python, focusing on practical applications of trading algorithms and market analysis.</p>
+                <p><strong>Skills Acquired:</strong> Python (Programming Language) · Problem Solving · Trading · Options Trading</p>
+                <p><strong>Course Highlights:</strong></p>
+                <ul>
+                    <li>Developed algorithms for trading options effectively in the financial market.</li>
+                    <li>Applied quantitative analysis techniques to assess market conditions and make informed trading decisions.</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div class="popup" id="popupQuantInsti">
+            <span class="popup-close" onclick="hidePopup('popupQuantInsti')">Close</span>
+            <div class="popup-content">
+                <h3>QuantInsti Certificate Details</h3>
+                <p>Completed the Introduction to Machine Learning for Trading course, gaining insights into machine learning techniques applicable in financial markets.</p>
+                <p><strong>Skills Acquired:</strong> Python (Programming Language) · Machine Learning · Mathematics</p>
+                <p><strong>Learning Outcomes:</strong></p>
+                <ul>
+                    <li>Gained knowledge of various machine learning models and their applications in trading.</li>
+                    <li>Implemented strategies to optimize trading performance using historical data analysis.</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div class="popup" id="popupAWS">
+            <span class="popup-close" onclick="hidePopup('popupAWS')">Close</span>
+            <div class="popup-content">
+                <h3>AWS Training Certificate Details</h3>
+                <p>Completed the Data Analytics Learning Plan covering services like EMR, Glue, Athena, Redshift, and Serverless Analytics to leverage AWS for data analysis.</p>
+                <p><strong>Key Skills Acquired:</strong></p>
+                <ul>
+                    <li>Utilized AWS services to build scalable data analytics solutions.</li>
+                    <li>Learned best practices for data processing and analysis in the cloud environment.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="popup" id="popupCodingSpoon">
+            <span class="popup-close" onclick="hidePopup('popupCodingSpoon')">Close</span>
+            <div class="popup-content">
+                <h3>Coding Spoon Certificate Details</h3>
+                <p>Completed advanced problem-solving and data structures and algorithms (DSA) training using Java, enhancing coding and algorithmic skills.</p>
+                <p><strong>Skills Acquired:</strong> Java Programming · Advanced Problem Solving · Data Structures and Algorithms (DSA)</p>
+                <p><strong>Training Highlights:</strong></p>
+                <ul>
+                    <li>Mastered advanced DSA concepts and their implementations in Java.</li>
+                    <li>Engaged in coding challenges to strengthen problem-solving abilities.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="popup" id="popupBharatScouts">
+            <span class="popup-close" onclick="hidePopup('popupBharatScouts')">Close</span>
+            <div class="popup-content">
+                <h3>Bharat Scouts and Guides Certificate Details</h3>
+                <p>Received the Governor Award in 2018, recognizing achievements in scouting and community service.</p>
+                <p><strong>Achievements:</strong></p>
+                <ul>
+                    <li>Demonstrated leadership and community engagement through scouting activities.</li>
+                    <li>Contributed to various community service initiatives, promoting social responsibility.</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- Popup Modal Template -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div id="popup-body"></div>
+            </div>
+        </div>
+        
+        
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <div class="contact-card">
+                <a href="mailto:purnakamshrivastava58@yahoo.com" id="download-btn" class="download-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/purnakam/" target="_blank" id="download-btn" class="download-btn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <a href="https://github.com/purnakam" target="_blank" id="download-btn" class="download-btn">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                
+                <a href="https://leetcode.com/u/Purnakam/" target="_blank" id="download-btn" class="download-btn">
+                    <i class="fab fa-leetcode"></i>
+                    <span>LeetCode</span>
+                </a>
+                
+                <a href="https://www.hackerrank.com/profile/ll5268887" target="_blank" id="download-btn" class="download-btn">
+                    <i class="fab fa-hackerrank"></i>
+                    <span>HackerRank</span>
+                </a>
+
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Purnakam Shrivastava. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</body>
+</html>
